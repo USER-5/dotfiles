@@ -1,0 +1,6 @@
+xrandr --output DisplayPort-1 --rotate left --mode 2560x1440 -r 75.00 --output DisplayPort-0 --primary --mode 2560x1440 -r 143.86 --right-of DisplayPort-1
+xrandr --output DisplayPort-0 --pos 1440x860
+wal -R
+feh --bg-fill ${HOME}/Pictures/wall/geo.jpg
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+xmodmap -e 'keycode 0x09 = Escape'
