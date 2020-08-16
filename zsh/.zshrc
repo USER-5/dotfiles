@@ -34,7 +34,6 @@ bindkey "^[[3~" delete-char
 alias ls='ls --color=auto'
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 export PATH="$HOME/.local/bin:$PATH"
 GITSTATUS_LOG_LEVEL=DEBUG
 
