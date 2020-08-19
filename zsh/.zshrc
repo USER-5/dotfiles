@@ -68,5 +68,5 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias op="xdg-open"
-alias phoenix="a1687658@phoenix.adelaide.edu.au"
+unsetopt correct_all
 bindkey -v
