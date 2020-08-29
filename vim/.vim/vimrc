@@ -28,6 +28,8 @@ Plugin 'lervag/vimtex'
 Plugin 'wikitopian/hardmode'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'itchyny/lightline.vim'
+Plugin 'Valloric/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 "filetype plugin on    " required
@@ -99,6 +101,7 @@ let g:rainbow_active = 1
 " lightline
 set laststatus=2
 set noshowmode
+set noshowcmd
 let g:lightline = {
 			\ 'colorscheme' : 'wombat',
 			\ }

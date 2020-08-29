@@ -5,4 +5,4 @@ Urxvt*depth: 32
 URxvt*background: rgba:0000/0000/0000/EEEE
 urxvt*transparent: false
 urxvt*shading: 40
-urxvt*fading: 20%
+urxvt*fading: 50%

@@ -169,7 +169,7 @@ bindsym $mod+r mode "resize"
 
 
 exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom -b --experimental-backends
 
 #setting system colours
 exec_always --no-startup-id wal -R
