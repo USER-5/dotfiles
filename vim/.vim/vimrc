@@ -135,3 +135,11 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 au VimEnter * silent! !xset r off
 au VimLeave * silent! !xset r on
+
+hi clear SpellBad
+hi clear DiffChange
+hi clear ErrorMsg
+hi SpellBad ctermbg=9
+hi Diffchange ctermbg=2
+hi ErrorMsg cterm=bold guibg=Red ctermbg=1 guifg=Black ctermfg=235
+hi Search cterm=underline ctermfg=Black
