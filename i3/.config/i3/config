@@ -210,7 +210,7 @@ bar {
 }
 
 bindsym $mod+d exec rofi -show run 
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 hide_edge_borders both
 
 gaps inner 25 

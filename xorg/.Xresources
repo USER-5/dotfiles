@@ -6,3 +6,4 @@ URxvt*background: rgba:0000/0000/0000/EEEE
 urxvt*transparent: false
 urxvt*shading: 40
 urxvt*fading: 0%
+URxvt.internalBorder: 10
