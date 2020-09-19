@@ -7,7 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = false
+	output_format = "i3bar"
+        colors = true
         interval = 5
 }
 
@@ -30,8 +31,8 @@ cpu_usage {
 
 ethernet _first_ {
         format_up = "IP: %ip"
-	color_bad = "#000000"
-	color_good = "#000000"
+	color_bad = "#FFFFFF"
+	color_good = "#FFFFFF"
 }
 
 battery all {
