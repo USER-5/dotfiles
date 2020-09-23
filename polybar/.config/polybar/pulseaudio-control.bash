@@ -7,24 +7,26 @@
 
 # Script configuration (more info in the README)
 OSD="no"  # On Screen Display message for KDE if enabled
-INC=2  # Increment when lowering/rising the volume
+INC=5  # Increment when lowering/rising the volume
 MAX_VOL=130  # Maximum volume
 AUTOSYNC="no"  # All programs have the same volume if enabled
-VOLUME_ICONS=( "# " "# " "# " )  # Volume icons array, from lower volume to higher
-MUTED_ICON="# "  # Muted volume icon
+VOLUME_ICONS=( " " " ")  # Volume icons array, from lower volume to higher
+MUTED_ICON="ﱝ "  # Muted volume icon
 MUTED_COLOR="%{F#6b6b6b}"  # Color when the audio is muted
 NOTIFICATIONS="no"  # Notifications when switching sinks if enabled
-SINK_ICON="# "  # Icon always shown to the left of the default sink names
+SINK_ICON=""  # Icon always shown to the left of the default sink names
+
 
 # Blacklist of PulseAudio sink names when switching between them. To obtain
 # the names of your active sinks, use `pactl list sinks short`.
 SINK_BLACKLIST=(
-    "alsa_output.usb-SinkYouDontUse-00.analog-stereo"
+    "alsa_output.pci-0000_01_00.1.hdmi-stereo-extra4"
 )
 
 # Maps PulseAudio sink names to human-readable names
 declare -A SINK_NICKNAMES
-SINK_NICKNAMES["alsa_output.usb-SomeManufacturer_SomeUsbSoundcard-00.analog-stereo"]="External Soundcard"
+SINK_NICKNAMES["alsa_output.usb-Yamaha_Corporation_Steinberg_UR12-00.iec958-stereo"]="蓼"
+SINK_NICKNAMES["alsa_output.pci-0000_00_1b.0.analog-stereo"]=""
 
 
 # Environment & global constants for the script
