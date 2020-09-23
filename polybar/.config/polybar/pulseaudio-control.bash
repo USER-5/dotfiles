@@ -209,9 +209,9 @@ function nextSink() {
 
     # Move all audio threads to new sink
     local inputs=$(pactl list short sink-inputs | cut -f 1)
-    for i in $inputs; do
-        pacmd move-sink-input "$i" "$newSink"
-    done
+    #for i in $inputs; do
+        # pacmd move-sink-input "$i" "$newSink"
+    #done
 
     if [ $NOTIFICATIONS = "yes" ]; then
         getNickname "$newSink"
