@@ -26,9 +26,11 @@ if current['data'] is not None and ("pid" in current["data"] or "description" in
         name = json.loads(requests.get(link, auth=(api_token, "api_token")).content)["data"]["name"]
     else:
         name = current['data']['description']
+    name = name.replace("-"," ")
     if len(name) > truncate + 3:
         words = name.count(' ') + 1
         each = int((truncate + 3 - 2 * words) / words)
+        each = each if each > 0 else 1
         name = ''.join(s[:each] + '. ' for s in name.split())
         name = name[:-1]
     m = int(m)
