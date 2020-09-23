@@ -99,6 +99,7 @@ cursor-scroll = ns-resize
 [module/updates]
 type = custom/script
 exec = ~/.config/polybar/updates-pacman-aurhelper.sh
+click-left = urxvt -hold -e 'yay'
 interval = 600
 format-underline = ${colors.underline}
 format-padding = 1
