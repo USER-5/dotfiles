@@ -99,7 +99,7 @@ cursor-scroll = ns-resize
 [module/updates]
 type = custom/script
 exec = ~/.config/polybar/updates-pacman-aurhelper.sh
-click-left = urxvt -hold -e 'yay'
+click-left = urxvt -hold -e 'yay' &
 interval = 600
 format-underline = ${colors.underline}
 format-padding = 1
@@ -228,7 +228,7 @@ format-underline = ${colors.underline}
 format-padding = 1
 interval = 20.0
 ; Add this line if you have xdg-utils
-click-left = "xdg-open https://toggl.com/app/timer" 
+click-left = xdg-open https://toggl.com/app/timer &
 
 [module/pulseaudio-control]
 type = custom/script

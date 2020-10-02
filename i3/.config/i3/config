@@ -167,13 +167,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
 exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id picom -b --experimental-backends
 
 #setting system colours
 exec_always --no-startup-id wal -R -a 65
-exec_always feh --bg-fill ${HOME}/Pictures/wall/clean2.png --bg-fill ${HOME}/Pictures/wall/clean2.png
+exec_always feh --bg-fill ${HOME}/Pictures/wall/clean-horiz.png --bg-fill ${HOME}/Pictures/wall/clean-vert.png
 
 set_from_resource $c0 i3wm.color0 #ffffff
 set_from_resource $c1 i3wm.color1 #f0f0f0
@@ -194,6 +192,7 @@ client.background       $c4
 
 # start polybar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
+exec_always --no-startup-id ${HOME}/.config/retrypicom.sh
 
 bindsym $mod+d exec rofi -show run 
 for_window [class=".*"] border pixel 1
