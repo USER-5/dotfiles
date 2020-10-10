@@ -13,15 +13,15 @@ QUEUED=`expr $QUEUED - $RUNNING`
 QUEUE_ICON=""
 RUN_ICON=""
 OUTPUT=""
-if [[ $QUEUED ~= "0" ]]; then
+if [[ $QUEUED != "0" ]]; then
 	OUTPUT="$QUEUE_ICON:$QUEUED"
-	if [[ $RUNNING ~= "0" ]]; then
+	if [[ $RUNNING != "0" ]]; then
 		OUTPUT="$OUTPUT "
 	fi
 fi
-if [[ $RUNNING ~= "0" ]]; then
+
+if [[ $RUNNING != "0" ]]; then
 	OUTPUT="$OUTPUT$RUN_ICON:$RUNNING"
 fi
-fi
-echo "$QUEUE_ICON:$QUEUED $RUN_ICON:$RUNNING"
-echo "$QUEUE_ICON:$QUEUED $RUN_ICON:$RUNNING"
+
+echo "$OUTPUT"
