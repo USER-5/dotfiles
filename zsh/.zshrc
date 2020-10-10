@@ -34,7 +34,7 @@ bindkey "^[[3~" delete-char
 alias ls='ls --color=auto'
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 GITSTATUS_LOG_LEVEL=DEBUG
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
