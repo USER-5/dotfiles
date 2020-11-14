@@ -32,8 +32,6 @@ bindkey "^[[3~" delete-char
 # End of lines configured by zsh-newuser-install
 
 alias ls='ls --color=auto'
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 GITSTATUS_LOG_LEVEL=DEBUG
 
@@ -61,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='vim'
 fi
 
 # Example aliases
