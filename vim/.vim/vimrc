@@ -29,12 +29,15 @@ Plugin 'wikitopian/hardmode'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rust-lang/rust.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-"filetype plugin on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on    " required
+syntax on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -85,10 +88,10 @@ endif
 
 
 "set up tab preferences
-set tabstop=4
+set tabstop=2
 set noexpandtab
 set autoindent
-set shiftwidth=4
+set shiftwidth=2
 " leave hjkl keys active :)
 let g:HardMode_level = 'wannabe'
 " turn off python style recommendation (default changes tab indenting to 8-spaces)
@@ -110,12 +113,13 @@ set noshowcmd
 let g:lightline = {
 			\ 'colorscheme' : 'wombat',
 			\ }
-
+" YCM
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " build and run commands on F8
-autocmd filetype c nnoremap <leader>r :w <bar> exec '!./autorun'<CR>
-autocmd filetype cpp nnoremap <leader>r :w <bar> exec '!./autorun'<CR>
-autocmd filetype python nnoremap <leader>r :w <bar> exec '!python '.shellescape('%')<CR>
+map <leader>r :w <bar> exec '!./autorun'<CR>
+autocmd filetype python nnoremap <leader>r :w <bar> exec '!python3 '.shellescape('%')<CR>
+autocmd filetype rust nnoremap <leader>r :w <bar> exec '!cargo run'<CR>
 autocmd filetype tex highlight OverLength NONE
 
 " Put these in an autocmd group, so that we can delete them easily.
@@ -139,6 +143,7 @@ map <silent> <C-n> :NERDTree<CR>
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 au VimEnter * silent! !xset r off
+au VimEnter * silent! syntax on
 au VimLeave * silent! !xset r on
 
 hi clear SpellBad
