@@ -66,6 +66,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias op="xdg-open"
+alias up="sudo apt update && sudo apt upgrade"
 unsetopt correct_all
 bindkey -v
 alias python=python3
