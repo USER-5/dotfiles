@@ -1,9 +1,0 @@
-urxvt*font:	xft:MesloLGS NF:size=16
-URxvt*scrollBar: false
-Xcursor.size: 16
-Urxvt*depth: 32
-URxvt*background: rgba:0000/0000/0000/EEEE
-urxvt*transparent: false
-urxvt*shading: 40
-urxvt*fading: 0%
-URxvt.internalBorder: 10
