@@ -1,9 +1,9 @@
 -- transparency
-transparency = 0.9
+transparency = 0.98
 bg_color = "#282C34"
 vim.g.neovide_transparency=0.0
 vim.g.transparency=transparency
-vim.g.neovide_background_color=bg_color .. string.format("%x", transparency * 255)
+vim.g.neovide_background_color=string.format("#282C34%x", transparency * 255)
 
 -- floating window blur
 blur = 2.0

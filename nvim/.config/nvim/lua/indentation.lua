@@ -1,8 +1,4 @@
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.cmd('set noexpandtab')
-
+vim.cmd('set ts=2 sw=2')
 vim.cmd('set listchars=tab:->,extends:>,precedes:<,nbsp:·,trail:·')
 vim.cmd('set list')
 
