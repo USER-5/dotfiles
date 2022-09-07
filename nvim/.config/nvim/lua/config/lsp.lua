@@ -29,8 +29,29 @@ local on_attach = function(client, bufnr)
 end
 
 
+---------------
+-- languages --
+---------------
 
--- languages
+-- Rust 
+-- requires: rust-analyzer to be installed (OS dependant)
 lsp.rust_analyzer.setup{
+	on_attach = on_attach
+}
+
+-- Python
+-- requires: $ pip install python-lsp-server
+-- optional: $ pip install yapf pycodestyle rope pyflakes
+lsp.pylsp.setup{
+	on_attach = on_attach
+}
+
+-- Bash
+-- requires: $ npm install -g bash-language server
+-- * ensure that nvm is properly configured to auto-load an npm version
+-- * if on fish, will need a fix for nvm's default:
+-- * https://github.com/FabioAntunes/fish-nvm
+-- optional: shellcheck (OS dependant)
+lsp.bashls.setup{
 	on_attach = on_attach
 }
