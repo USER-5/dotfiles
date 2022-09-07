@@ -3,8 +3,9 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.cmd('set noexpandtab')
 
-vim.opt.listchars.tab='->'
-vim.opt.listchars.trail='·'
+vim.cmd('set listchars=tab:->,extends:>,precedes:<,nbsp:·,trail:·')
 vim.cmd('set list')
 
 vim.cmd('set number relativenumber')
+-- Disables adding a new comment on single-line comments
+vim.cmd('set fo-=r fo -=o')

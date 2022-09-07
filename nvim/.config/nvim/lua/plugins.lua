@@ -28,12 +28,13 @@ return require('packer').startup(function(use)
 		config = [[ require('config.nvim-cmp') ]]
 	}
 
-	use {'nvim-telescope/telescope-fzf-native.nvim', run='make'}
-
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = {
-			'nvim-lua/plenary.nvim'
+			'nvim-lua/plenary.nvim',
+			{
+				'nvim-telescope/telescope-fzf-native.nvim', run='make'
+			}
 		},
 		config = [[require('config.telescope')]]
 	}
