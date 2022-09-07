@@ -28,6 +28,12 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
+local cmp_status_ok, cmp = pcall(require, 'cmp_nvim_lsp')
+if not cmp_status_ok then
+	local capabilities = {}
+else
+	local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+end
 
 ---------------
 -- languages --
@@ -36,14 +42,16 @@ end
 -- Rust 
 -- requires: rust-analyzer to be installed (OS dependant)
 lsp.rust_analyzer.setup{
-	on_attach = on_attach
+	on_attach = on_attach,
+	capabilities = capabilities,
 }
 
 -- Python
 -- requires: $ pip install python-lsp-server
 -- optional: $ pip install yapf pycodestyle rope pyflakes
 lsp.pylsp.setup{
-	on_attach = on_attach
+	on_attach = on_attach,
+	capabilities = capabilities,
 }
 
 -- Bash
@@ -53,5 +61,6 @@ lsp.pylsp.setup{
 -- * https://github.com/FabioAntunes/fish-nvm
 -- optional: shellcheck (OS dependant)
 lsp.bashls.setup{
-	on_attach = on_attach
+	on_attach = on_attach,
+	capabilities = capabilities,
 }

@@ -12,9 +12,21 @@ return require('packer').startup(function(use)
 		config = [[require('config.nvim-tree')]]
 	}
 
-	use {'neovim/nvim-lspconfig', config = [[require('config.lsp')]] }
+	use {
+		'neovim/nvim-lspconfig',
+		config = [[require('config.lsp')]],
+	}
 
-	use {'ms-jpq/coq_nvim', config = [[require('config.coq')]] }
+	use {
+		'hrsh7th/nvim-cmp',
+		requires = {
+			'hrsh7th/cmp-nvim-lsp',
+			'hrsh7th/cmp-buffer',
+			'hrsh7th/cmp-path',
+			'hrsh7th/cmp-cmdline',
+		},
+		config = [[ require('config.nvim-cmp') ]]
+	}
 
 	use {'nvim-telescope/telescope-fzf-native.nvim', run='make'}
 
