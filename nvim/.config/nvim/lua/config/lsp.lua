@@ -54,13 +54,49 @@ lsp.pylsp.setup{
 	capabilities = capabilities,
 }
 
+-- !! FOR NPM INSTALLED PACKAGES !!
+-- ensure that nvm is properly configured to auto-load an npm version
+-- if on fish, will need a fix for nvm's default:
+-- https://github.com/FabioAntunes/fish-nvm - see the nvm_alias_function if it works
+-- you _may_ need to `$ sudo fish` first
+
 -- Bash
--- requires: $ npm install -g bash-language server
--- * ensure that nvm is properly configured to auto-load an npm version
--- * if on fish, will need a fix for nvm's default:
--- * https://github.com/FabioAntunes/fish-nvm
+-- requires: $ npm install -g bash-language-server
+-- from fresh terminal: $ bash-language-server -v
 -- optional: shellcheck (OS dependant)
 lsp.bashls.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
+
+-- Typescript
+-- requires: $ npm install -g typescript typescript-language-server
+-- from fresh terminal: $ typescript-language-server --stdio
+lsp.tsserver.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
+
+-- ESLint
+-- requires: $ npm install -g vscode-langservers-extracted
+-- from fresh terminal: $ vscode-eslint-language-server --stdio
+lsp.eslint.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
+
+-- Svelte
+-- requires: $ npm install -g svelte-language-server
+-- from fresh terminal: $ svelteserver --stdio
+lsp.svelte.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
+
+-- Tailwind
+-- requires: $ npm install -g @tailwindcss/language-server
+-- from fresh terminal: $ tailwindcss-language-server --stdio
+lsp.tailwindcss.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
 }

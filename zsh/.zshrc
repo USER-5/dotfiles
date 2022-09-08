@@ -42,6 +42,3 @@ bindkey "^[[3~" delete-char
 
 # always ls in colour
 alias ls='ls --color=auto'
-
-# Path Config
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
