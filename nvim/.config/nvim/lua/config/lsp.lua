@@ -100,3 +100,11 @@ lsp.tailwindcss.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
 }
+
+-- Angular
+-- requires: $ npm install -g @angular/language-server
+-- from fresh terminal: $ ngserver --stdio
+lsp.angularls.setup{
+       on_attach = on_attach,
+       capabilities = capabilities,
+}
