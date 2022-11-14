@@ -32,7 +32,7 @@ local cmp_status_ok, cmp = pcall(require, 'cmp_nvim_lsp')
 if not cmp_status_ok then
 	local capabilities = {}
 else
-	local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+	local capabilities = require('cmp_nvim_lsp').default_capabilities()
 end
 
 ---------------
