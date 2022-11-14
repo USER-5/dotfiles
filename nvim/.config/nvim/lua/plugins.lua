@@ -1,5 +1,4 @@
 return require('packer').startup(function(use)
-	
 	-- Packer manages the plugins. Required
 	use 'wbthomason/packer.nvim'
 
