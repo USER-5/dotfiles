@@ -76,5 +76,13 @@ return require('packer').startup(function(use)
 		},
 		config = [[require('config.lsp')]]
 	}
+		
+	use {
+		'tpope/vim-surround'
+	}
+	
+	use {
+		'gpanders/editorconfig.nvim'
+	}
 
 end)
