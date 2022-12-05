@@ -4,4 +4,4 @@ vim.cmd('set list')
 
 vim.cmd('set number relativenumber')
 -- Disables adding a new comment on single-line comments
-vim.cmd('set fo-=r fo -=o')
+vim.cmd('au FileType * set fo-=r fo-=o')
