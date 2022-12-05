@@ -3,3 +3,4 @@ vim.cmd('colorscheme onedark')
 if not vim.g.neovide then
 	vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 end
+vim.cmd('hi LineNr ctermfg=grey')
