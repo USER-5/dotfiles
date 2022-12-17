@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Theme
-	use {'joshdick/onedark.vim', config = [[require('config.onedark')]] }
+	use {'joshdick/onedark.vim' }
 
 	-- File manager and dev icons
 	use {
@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
 		requires = {
 			'kyazdani42/nvim-web-devicons',
 		},
-		config = [[require('config.nvim-tree')]]
 	}
 
 	-- Fuzzy finder (install fd and make / gcc)
@@ -37,18 +36,16 @@ return require('packer').startup(function(use)
 				'nvim-telescope/telescope-fzf-native.nvim', run='make'
 			}
 		},
-		config = [[require('config.telescope')]]
 	}
 
 	-- Helps neovim find its "root" of a project
 	use {
-		'ahmedkhalf/project.nvim',
-		config = [[require('config.project')]]
+		'ahmedkhalf/project.nvim'
 	}
 
 	-- Auto-insert closing braces, etc.
 	use {
-		'jiangmiao/auto-pairs', config = [[require('config.auto-pairs')]]
+		'jiangmiao/auto-pairs'
 	}
 
 	-- Better status line
@@ -57,14 +54,12 @@ return require('packer').startup(function(use)
 		requires = {
 			'kyazdani42/nvim-web-devicons', opt=true
 		},
-		config = [[ require('config.lualine') ]]
 	}
 
 	-- Better syntax highlighting
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = function () require('nvim-treesitter.install').update({with_sync = true}) end,
-		config = [[require('config.treesitter')]]
 	}
 
 	-- All-in-one language server engine
@@ -88,7 +83,6 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 			{'rafamadriz/friendly-snippets'},
 		},
-		config = [[require('config.lsp')]]
 	}
 		
 	use {
