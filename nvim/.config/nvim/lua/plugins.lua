@@ -1,12 +1,12 @@
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+		vim.cmd [[packadd packer.nvim]]
+		return true
+	end
+	return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Theme
-	use {'joshdick/onedark.vim' }
+	use { 'EdenEast/nightfox.nvim' }
 
 	-- File manager and dev icons
 	use {
@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
 		requires = {
 			'nvim-lua/plenary.nvim',
 			{
-				'nvim-telescope/telescope-fzf-native.nvim', run='make'
+				'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
 			}
 		},
 	}
@@ -52,49 +52,50 @@ return require('packer').startup(function(use)
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = {
-			'kyazdani42/nvim-web-devicons', opt=true
+			'kyazdani42/nvim-web-devicons', opt = true
 		},
 	}
 
 	-- Better syntax highlighting
 	use {
 		'nvim-treesitter/nvim-treesitter',
-		run = function () require('nvim-treesitter.install').update({with_sync = true}) end,
+		-- Don't fail upon first installation
+		run = function()
+			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+			ts_update()
+		end,
 	}
+
+	use { 'gpanders/editorconfig.nvim' }
+	use { 'mbbill/undotree' }
+	use { 'tpope/vim-surround' }
+	use { 'tpope/vim-fugitive' }
 
 	-- All-in-one language server engine
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
-			{'jose-elias-alvarez/null-ls.nvim'},
-			{'WhoIsSethDaniel/mason-tool-installer.nvim'},
+			{ 'neovim/nvim-lspconfig' },
+			{ 'williamboman/mason.nvim' },
+			{ 'williamboman/mason-lspconfig.nvim' },
+			{ 'jose-elias-alvarez/null-ls.nvim' },
+			{ 'WhoIsSethDaniel/mason-tool-installer.nvim' },
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-buffer'},
-			{'hrsh7th/cmp-path'},
-			{'saadparwaiz1/cmp_luasnip'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'hrsh7th/cmp-nvim-lua'},
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-buffer' },
+			{ 'hrsh7th/cmp-path' },
+			{ 'saadparwaiz1/cmp_luasnip' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'hrsh7th/cmp-nvim-lua' },
 
 			-- Snippets
-			{'L3MON4D3/LuaSnip'},
-			{'rafamadriz/friendly-snippets'},
+			{ 'L3MON4D3/LuaSnip' },
+			{ 'rafamadriz/friendly-snippets' },
 		},
 	}
-		
-	use {
-		'tpope/vim-surround'
-	}
-	
-	use {
-		'gpanders/editorconfig.nvim'
-	}
-	
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	if packer_bootstrap then
 		require('packer').sync()
