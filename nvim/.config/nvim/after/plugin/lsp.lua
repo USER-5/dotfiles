@@ -3,25 +3,20 @@ local mason_tool_installer = require('mason-tool-installer')
 local lsp = require('lsp-zero')
 
 -- Regular Null-ls servers.
-local null_ls_formatters = { "rustfmt" }
+local null_ls_formatters = {}
 local null_ls_code_actions = { "eslint_d" }
 
 -- Regular LSPs
 local mason_lsps = {
 	"ansiblels",
 	"bashls",
-	"clangd",
 	"cssls",
 	"dockerls",
 	"html",
 	"jsonls",
 	"tsserver",
-	"sumneko_lua",
-	"marksman",
 	"pyright",
-	"rust_analyzer",
 	"svelte",
-	"taplo",
 	"tailwindcss",
 	"yamlls",
 }
