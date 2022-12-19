@@ -65,6 +65,14 @@ return require('packer').startup(function(use)
 			ts_update()
 		end,
 	}
+	
+	-- Enable comment/uncomment blocks
+	use {
+    		'numToStr/Comment.nvim',
+    		config = function()
+        		require('Comment').setup()
+    		end
+	}
 
 	use { 'gpanders/editorconfig.nvim' }
 	use { 'mbbill/undotree' }
