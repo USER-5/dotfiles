@@ -9,7 +9,7 @@ vim.keymap.set('n', '<D-v>', '"+p')
 
 -- allow moving highlighted code
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- better J behaviour (maintain cursor location)
 vim.keymap.set("n", "J", "mzJ`z")
