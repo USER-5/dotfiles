@@ -4,6 +4,7 @@ local modules = {
 	'font',
 	'indentation',
 	'editor',
+	'run',
 }
 
 -- allow hard (no cache) reload of config
