@@ -39,14 +39,10 @@ return require('packer').startup(function(use)
 	}
 
 	-- Helps neovim find its "root" of a project
-	use {
-		'ahmedkhalf/project.nvim'
-	}
+	use { 'ahmedkhalf/project.nvim' }
 
 	-- Auto-insert closing braces, etc.
-	use {
-		'jiangmiao/auto-pairs'
-	}
+	use { 'windwp/nvim-autopairs' }
 
 	-- Better status line
 	use {
