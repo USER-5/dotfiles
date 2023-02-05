@@ -3,7 +3,7 @@ local mason_tool_installer = require('mason-tool-installer')
 local lsp = require('lsp-zero')
 
 -- Regular Null-ls servers.
-local null_ls_formatters = {}
+local null_ls_formatters = { "black" }
 local null_ls_code_actions = { "eslint_d" }
 
 -- Regular LSPs
@@ -15,7 +15,7 @@ local mason_lsps = {
 	"html",
 	"jsonls",
 	"tsserver",
-	"pyright",
+	"ruff-lsp",
 	"svelte",
 	"tailwindcss",
 	"yamlls",
