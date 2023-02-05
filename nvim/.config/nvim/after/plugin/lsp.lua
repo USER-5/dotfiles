@@ -15,7 +15,7 @@ local mason_lsps = {
 	"html",
 	"jsonls",
 	"tsserver",
-	"ruff-lsp",
+	"ruff_lsp",
 	"svelte",
 	"tailwindcss",
 	"yamlls",
