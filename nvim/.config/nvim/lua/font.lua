@@ -1,1 +1,1 @@
-vim.opt.guifont = { "Iosevka Nerd Font Mono", ":h16" }
+vim.opt.guifont = { "JetBrainsMono NF", ":h16" }
