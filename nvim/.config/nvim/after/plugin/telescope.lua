@@ -24,4 +24,4 @@ if vim.fn.executable('fd') == 0 then
 	print("fd not installed - recommend installing")
 end
 
-vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>Telescope find_files<cr>', {})
