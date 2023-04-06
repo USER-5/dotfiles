@@ -4,5 +4,5 @@ require("nvim-tree").setup({
 })
 
 -- keybinds
-vim.keymap.set('n', '<C-n>', '<Cmd> NvimTreeFindFile<CR>')
-vim.keymap.set('n', '<C-t>', '<Cmd> NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>n', '<Cmd> NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<leader>t', '<Cmd> NvimTreeToggle<CR>')
