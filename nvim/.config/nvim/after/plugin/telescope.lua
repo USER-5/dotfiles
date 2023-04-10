@@ -21,6 +21,11 @@ require('telescope').setup {
 		["ui-select"] = {
 			require('telescope.themes').get_cursor({})
 		}
+	},
+	pickers = {
+		find_files = {
+ 			hidden = true
+		}
 	}
 }
 
