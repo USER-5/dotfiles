@@ -5,6 +5,7 @@ local lsp = require('lsp-zero')
 -- Regular Null-ls servers.
 local null_ls_formatters = { "black", "ruff", "rustfmt" }
 local null_ls_code_actions = { "eslint_d" }
+local null_ls_linters = { "mypy" }
 
 -- Regular LSPs
 local mason_lsps = {
@@ -39,6 +40,11 @@ end)
 table.foreach(null_ls_code_actions, function(_, code_action)
 	table.insert(null_ls_sources, null_ls.builtins.code_actions[code_action])
 	table.insert(mason_tools_lsps, code_action)
+end)
+
+table.foreach(null_ls_linters, function(_, linter)
+	table.insert(null_ls_sources, null_ls.builtins.diagnostics[linter])
+	table.insert(mason_tools_lsps, linter)
 end)
 
 -- Installs the non-LSP servers (formatters, etc.)
