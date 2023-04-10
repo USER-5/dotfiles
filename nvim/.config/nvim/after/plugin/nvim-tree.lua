@@ -1,6 +1,9 @@
 -- empty setup using defaults
 require("nvim-tree").setup({
-	update_cwd = true
+	update_cwd = true,
+	renderer = {
+		group_empty = true
+	}
 })
 
 -- keybinds
