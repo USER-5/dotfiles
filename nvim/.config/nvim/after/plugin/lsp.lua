@@ -4,8 +4,8 @@ local lsp = require('lsp-zero')
 
 -- Regular Null-ls servers.
 local null_ls_formatters = { "black", "ruff", "rustfmt" }
-local null_ls_code_actions = { "eslint_d" }
-local null_ls_linters = { "mypy" }
+local null_ls_code_actions = { }
+local null_ls_linters = { "mypy", "ruff" }
 
 -- Regular LSPs
 local mason_lsps = {
@@ -16,7 +16,6 @@ local mason_lsps = {
 	"html",
 	"jsonls",
 	"tsserver",
-	"ruff_lsp",
 	"svelte",
 	"tailwindcss",
 	"yamlls",
@@ -28,6 +27,15 @@ local mason_lsps = {
 local null_ls_sources = {
 	null_ls.builtins.formatting.prettierd.with({
 		extra_filetypes = { "markdown", "svelte" }
+	}),
+	null_ls.builtins.diagnostics.eslint_d.with({
+		extra_filetypes = { "svelte" }
+	}),
+	null_ls.builtins.formatting.eslint_d.with({
+		extra_filetypes = { "svelte" }
+	}),
+	null_ls.builtins.code_actions.eslint_d.with({
+		extra_filetypes = { "svelte" }
 	})
 }
 local mason_tools_lsps = { "prettierd" }
