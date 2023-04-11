@@ -38,7 +38,7 @@ local null_ls_sources = {
 		extra_filetypes = { "svelte" }
 	})
 }
-local mason_tools_lsps = { "prettierd" }
+local mason_tools_lsps = { "prettierd", "eslint_d" }
 
 table.foreach(null_ls_formatters, function(_, formatter)
 	table.insert(null_ls_sources, null_ls.builtins.formatting[formatter])
