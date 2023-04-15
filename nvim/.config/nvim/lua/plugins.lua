@@ -62,13 +62,13 @@ return require('packer').startup(function(use)
 			ts_update()
 		end,
 	}
-	
+
 	-- Enable comment/uncomment blocks
 	use {
-    		'numToStr/Comment.nvim',
-    		config = function()
-        		require('Comment').setup()
-    		end
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
 	}
 
 	use { 'gpanders/editorconfig.nvim' }
@@ -101,7 +101,11 @@ return require('packer').startup(function(use)
 		},
 	}
 
-	use { 'mickael-menu/zk-nvim' }
+	use 'mickael-menu/zk-nvim'
+
+	use { "folke/trouble.nvim",
+		requires = { "nvim-tree/nvim-web-devicons" }
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	if packer_bootstrap then
