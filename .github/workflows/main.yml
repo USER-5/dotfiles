@@ -5,17 +5,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      
+      - name: Github Tag with semantic versioning
+        uses: hennejg/github-tag-action@v4.3.1
+        
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: 'zip'
           filename: 'release.zip'
           exclusions: '*.git* .github'
+          
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
-          tag: "dev"
           makeLatest: true
-          allowUpdates: true
           artifacts: "release.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
