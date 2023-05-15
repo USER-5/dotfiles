@@ -1,7 +1,8 @@
+name: Create Relase
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
 jobs:
   build:
     runs-on: ubuntu-latest
