@@ -106,6 +106,9 @@ return require('packer').startup(function(use)
 	use { "folke/trouble.nvim",
 		requires = { "nvim-tree/nvim-web-devicons" }
 	}
+		
+	-- jinja / ansible syntax highlighting
+	use 'HiPhish/jinja.vim',
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	if packer_bootstrap then
