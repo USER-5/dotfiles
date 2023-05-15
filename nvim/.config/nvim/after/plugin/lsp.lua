@@ -18,7 +18,6 @@ local mason_lsps = {
 	"tsserver",
 	"svelte",
 	"tailwindcss",
-	"yamlls",
 }
 
 -- beware beyond here...
