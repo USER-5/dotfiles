@@ -1,4 +1,4 @@
-name: Create Archive
+name: Tag commit
 on: [push]
 jobs:
   build:
