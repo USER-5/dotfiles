@@ -22,4 +22,4 @@ jobs:
         with:
           makeLatest: true
           artifacts: "release.zip"
-          token: ${{ secrets.DEPLOY_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
