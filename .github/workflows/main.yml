@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-        with:
-          ssh-key: "${{ secrets.DEPLOY_KEY }}"
       
       - name: Github Tag with semantic versioning
         uses: hennejg/github-tag-action@v4.3.1
+        with: 
+          token: ${{ secrets.DEPLOY_TOKEN }}
