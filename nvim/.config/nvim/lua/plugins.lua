@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
 	}
 		
 	-- jinja / ansible syntax highlighting
-	use 'HiPhish/jinja.vim',
+	use 'HiPhish/jinja.vim'
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	if packer_bootstrap then
