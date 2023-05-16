@@ -9,4 +9,4 @@ jobs:
       - name: Github Tag with semantic versioning
         uses: hennejg/github-tag-action@v4.3.1
         with: 
-          token: ${{ secrets.DEPLOY_TOKEN }}
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
