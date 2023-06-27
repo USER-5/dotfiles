@@ -1,5 +1,7 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
+vim.cmd(':silent ! rm -r /opt/jdtls/workspaces/')
+
 local config = {
 	cmd = {
 		'java',

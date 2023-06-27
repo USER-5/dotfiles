@@ -5,7 +5,7 @@ local lsp = require('lsp-zero')
 -- Regular Null-ls servers.
 local null_ls_formatters = { "black", "rustfmt" }
 local null_ls_code_actions = { }
-local null_ls_linters = { "mypy" }
+local null_ls_linters = { }
 
 -- Regular LSPs
 local mason_lsps = {
@@ -15,6 +15,7 @@ local mason_lsps = {
 	"dockerls",
 	"html",
 	"jsonls",
+	"pyright"
 	"tsserver",
 	"svelte",
 	"tailwindcss",
