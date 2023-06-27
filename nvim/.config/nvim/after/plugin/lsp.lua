@@ -15,7 +15,7 @@ local mason_lsps = {
 	"dockerls",
 	"html",
 	"jsonls",
-	"pyright"
+	"pyright",
 	"tsserver",
 	"svelte",
 	"tailwindcss",
