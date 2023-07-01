@@ -54,6 +54,11 @@ return require("packer").startup(function(use)
 		},
 	}
 
+	use {
+		'j-hui/fidget.nvim',
+		tag = "legacy"
+	}
+
 	-- Better syntax highlighting
 	use {
 		"nvim-treesitter/nvim-treesitter",
@@ -104,11 +109,11 @@ return require("packer").startup(function(use)
 
 	use "mickael-menu/zk-nvim"
 
-	use { 
+	use {
 		"folke/trouble.nvim",
 		requires = "nvim-tree/nvim-web-devicons"
 	}
-		
+
 	-- jinja / ansible syntax highlighting
 	use "HiPhish/jinja.vim"
 

@@ -16,6 +16,7 @@ local mason_lsps = {
 	"html",
 	"jsonls",
 	"pyright",
+	"rust_analyzer",
 	"tsserver",
 	"svelte",
 	"tailwindcss",
@@ -67,11 +68,12 @@ null_ls.setup({
 	sources = null_ls_sources
 })
 
-lsp.preset('recommended')
 lsp.ensure_installed(mason_lsps)
+lsp.preset('recommended')
 
 -- Runs for each buffer
-lsp.on_attach(function(_, bufnr)
+lsp.on_attach(function(client, bufnr)
+	lsp.default_keymaps({buffer = bufnr})
 	local noremap = { buffer = bufnr, remap = false }
 	vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, noremap)
 	vim.keymap.set('n', '<leader>o', vim.lsp.buf.format, noremap)
@@ -79,6 +81,20 @@ lsp.on_attach(function(_, bufnr)
 	vim.opt.signcolumn = 'yes'
 end)
 
--- Allow lua to work in nvim config
-lsp.nvim_workspace()
+-- Custom options for certain languages
+lsp.configure('rust_analyzer', {
+	settings = {
+		['rust-analyzer'] = {
+			check = {
+				command = "clippy"
+			},
+			diagnostics = {
+				experimental = {
+					enable = true
+				}
+			}
+		}
+	}
+})
+
 lsp.setup()
