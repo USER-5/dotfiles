@@ -98,3 +98,9 @@ lsp.configure('rust_analyzer', {
 })
 
 lsp.setup()
+
+require('cmp').setup({
+	experimental = {
+		ghost_text = true,
+	},
+})
