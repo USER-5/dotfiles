@@ -1,7 +1,6 @@
 local modules = {
 	'plugins',
 	'keybinds',
-	'font',
 	'indentation',
 	'editor',
 	'run',
@@ -22,7 +21,6 @@ end
 -- :ReloadConfig in the command line
 vim.cmd('command! ReloadConfig lua ReloadConfig()')
 
-if vim.g.neovide then require('neovide') end
 table.foreach(modules, function(_, module)
 	require(module)
 end)

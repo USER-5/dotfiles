@@ -16,7 +16,7 @@ return require("packer").startup(function(use)
 	use "wbthomason/packer.nvim"
 
 	-- Theme
-	use "EdenEast/nightfox.nvim"
+	use "nordtheme/vim"
 
 	-- File manager and dev icons
 	use {
@@ -95,6 +95,7 @@ return require("packer").startup(function(use)
 
 			-- Autocompletion
 			"hrsh7th/nvim-cmp",
+			"onsails/lspkind.nvim",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"saadparwaiz1/cmp_luasnip",

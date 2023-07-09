@@ -4,8 +4,8 @@ local lsp = require('lsp-zero')
 
 -- Regular Null-ls servers.
 local null_ls_formatters = { "black", "rustfmt" }
-local null_ls_code_actions = { }
-local null_ls_linters = { }
+local null_ls_code_actions = {}
+local null_ls_linters = {}
 
 -- Regular LSPs
 local mason_lsps = {
@@ -73,7 +73,7 @@ lsp.preset('recommended')
 
 -- Runs for each buffer
 lsp.on_attach(function(client, bufnr)
-	lsp.default_keymaps({buffer = bufnr})
+	lsp.default_keymaps({ buffer = bufnr })
 	local noremap = { buffer = bufnr, remap = false }
 	vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, noremap)
 	vim.keymap.set('n', '<leader>o', vim.lsp.buf.format, noremap)
@@ -99,8 +99,33 @@ lsp.configure('rust_analyzer', {
 
 lsp.setup()
 
-require('cmp').setup({
+local lspkind = require('lspkind')
+local cmp = require('cmp')
+cmp.setup({
+	window = {
+		completion = {
+			col_offset = -3,
+			side_padding = 0
+		}
+	},
+	preselect = cmp.PreselectMode.None,
 	experimental = {
 		ghost_text = true,
 	},
+	formatting = {
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			vim_item = lspkind.cmp_format({
+				mode = "symbol",
+				menu = ({
+					buffer = "",
+					nvim_lsp = "",
+					luasnip = "",
+				})
+			})(entry, vim_item)
+			vim_item.kind = " " .. (vim_item.kind or "") .. " "
+			return vim_item
+		end
+	}
 })
+
