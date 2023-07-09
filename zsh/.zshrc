@@ -42,3 +42,5 @@ bindkey "^[[3~" delete-char
 
 # always ls in colour
 alias ls='ls --color=auto'
+
+[ -f "/Users/patrickgregory/.ghcup/env" ] && source "/Users/patrickgregory/.ghcup/env" # ghcup-env
