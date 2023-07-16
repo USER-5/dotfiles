@@ -16,7 +16,7 @@ return require("packer").startup(function(use)
 	use "wbthomason/packer.nvim"
 
 	-- Theme
-	use "nordtheme/vim"
+	use "rmehri01/onenord.nvim"
 
 	-- File manager and dev icons
 	use {

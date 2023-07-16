@@ -43,6 +43,6 @@ function _G.NvimRun()
 	else
 		-- run the script
 		print("Running '" .. runfile .. "'")
-		vim.cmd(":! ./" .. runfile)
+		vim.cmd(":!COLUMNS=" .. vim.o.co .. " ./" .. runfile)
 	end
 end
