@@ -108,8 +108,6 @@ return require("packer").startup(function(use)
 		},
 	}
 
-	use "mickael-menu/zk-nvim"
-
 	use {
 		"folke/trouble.nvim",
 		requires = "nvim-tree/nvim-web-devicons"

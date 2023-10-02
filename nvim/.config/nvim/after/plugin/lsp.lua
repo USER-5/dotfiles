@@ -3,7 +3,7 @@ local mason_tool_installer = require('mason-tool-installer')
 local lsp = require('lsp-zero')
 
 -- Regular Null-ls servers.
-local null_ls_formatters = { "black", "rustfmt" }
+local null_ls_formatters = { "black", "rustfmt", "shfmt" }
 local null_ls_code_actions = {}
 local null_ls_linters = {}
 

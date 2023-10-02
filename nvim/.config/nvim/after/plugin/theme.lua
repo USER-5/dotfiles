@@ -1,12 +1,29 @@
 require('onenord').setup({
-    styles = {
-            comments = "italic",
-    },
-    inverse = {
-            match_paren = true
-    }
+	styles = {
+		comments = "italic",
+	},
+	inverse = {
+		match_paren = true
+	}
 })
 vim.cmd('colorscheme onenord')
+
+-- Set background colours to none
+vim.cmd("highlight Normal ctermbg=NONE guibg=NONE")
+vim.cmd("highlight NormalNC ctermbg=NONE guibg=NONE")
+vim.cmd("highlight NormalFloat ctermbg=NONE guibg=NONE")
+vim.cmd("highlight FloatBorder ctermbg=NONE guibg=NONE")
+vim.cmd("highlight TelescopeNormal ctermbg=NONE guibg=NONE")
+vim.cmd("highlight CursorLine ctermbg=NONE guibg=NONE")
+vim.cmd("highlight CursorColumn ctermbg=NONE guibg=NONE")
+vim.cmd("highlight NeoTreeNormal ctermbg=NONE guibg=NONE")
+vim.cmd("highlight NvimTreeNormal ctermbg=NONE guibg=NONE")
+vim.cmd("highlight NvimTreeNormalFloat ctermbg=NONE guibg=NONE")
+vim.cmd("highlight BufferInactive ctermbg=NONE guibg=NONE")
+vim.cmd("highlight BufferInactiveMod ctermbg=NONE guibg=NONE")
+vim.cmd("highlight BufferInactiveSign ctermbg=NONE guibg=NONE")
+vim.cmd("highlight BufferInactiveIndex ctermbg=NONE guibg=NONE")
+vim.cmd("highlight BufferInactiveTarget ctermbg=NONE guibg=NONE")
 
 local colors = require('onenord.colors').load()
 
