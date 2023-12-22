@@ -54,10 +54,7 @@ return require("packer").startup(function(use)
 		},
 	}
 
-	use {
-		'j-hui/fidget.nvim',
-		tag = "legacy"
-	}
+	use 'j-hui/fidget.nvim'
 
 	-- Better syntax highlighting
 	use {

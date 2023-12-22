@@ -108,7 +108,10 @@ cmp.setup({
 			side_padding = 0
 		}
 	},
-	preselect = cmp.PreselectMode.None,
+	preselect = 'none',
+	completion = {
+			completeopt = 'noselect'
+	},
 	experimental = {
 		ghost_text = true,
 	},

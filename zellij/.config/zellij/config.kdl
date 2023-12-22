@@ -1,7 +1,10 @@
 keybinds {
-	unbind "Ctrl p" "Ctrl n"
+	unbind "Ctrl p" "Ctrl n" "Ctrl o"
 	resize {
 		bind "Ctrl e" { SwitchToMode "Normal"; }
+	}
+	session {
+		bind "Ctrl k" { SwitchToMode "Normal"; }
 	}
 	pane {
 		bind "Ctrl a" { SwitchToMode "Normal"; }
@@ -11,6 +14,9 @@ keybinds {
 	}
 	shared_except "resize" "locked" {
 		bind "Ctrl e" { SwitchToMode "Resize"; }
+	}
+	shared_except "session" "locked" {
+			bind "Ctrl k" { SwitchToMode "Session"; }
 	}
 }
 
@@ -161,3 +167,4 @@ theme "one-half-dark"
 // The folder in which Zellij will look for themes
 //
 // theme_dir "/path/to/my/theme_dir"
+// If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
