@@ -7,5 +7,5 @@ require("nvim-tree").setup({
 })
 
 -- keybinds
-vim.keymap.set('n', '<leader>n', '<Cmd> NvimTreeFindFile<CR>')
-vim.keymap.set('n', '<leader>t', '<Cmd> NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>n', '<Cmd> NvimTreeFindFile<CR>', { desc = "Show current file in tree" })
+vim.keymap.set('n', '<leader>t', '<Cmd> NvimTreeToggle<CR>', { desc = "File tree" })

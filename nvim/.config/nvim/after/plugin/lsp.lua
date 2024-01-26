@@ -75,9 +75,10 @@ lsp.preset('recommended')
 lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({ buffer = bufnr })
 	local noremap = { buffer = bufnr, remap = false }
-	vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, noremap)
-	vim.keymap.set('n', '<leader>o', vim.lsp.buf.format, noremap)
-	vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, noremap)
+	vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float,
+		{ buffer = bufnr, remap = false, desc = "Error float" })
+	vim.keymap.set('n', '<leader>o', vim.lsp.buf.format, { buffer = bufnr, remap = false, desc = "Format document" })
+	vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, { buffer = bufnr, remap = false, desc = "Code actions" })
 	vim.opt.signcolumn = 'yes'
 end)
 
@@ -110,7 +111,7 @@ cmp.setup({
 	},
 	preselect = 'none',
 	completion = {
-			completeopt = 'noselect'
+		completeopt = 'noselect'
 	},
 	experimental = {
 		ghost_text = true,
@@ -131,4 +132,3 @@ cmp.setup({
 		end
 	}
 })
-

@@ -24,7 +24,7 @@ require('telescope').setup {
 	},
 	pickers = {
 		find_files = {
- 			hidden = true
+			hidden = true
 		}
 	}
 }
@@ -42,5 +42,10 @@ if vim.fn.executable('fd') == 0 then
 end
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Fuzzy search (filename)" })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "Grep for files" })
+
+local wk = require("which-key")
+wk.register({
+	f = { name = "File" }
+}, { prefix = "<leader>" })

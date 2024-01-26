@@ -110,6 +110,8 @@ return require("packer").startup(function(use)
 		requires = "nvim-tree/nvim-web-devicons"
 	}
 
+	use "folke/which-key.nvim"
+
 	-- jinja / ansible syntax highlighting
 	use "HiPhish/jinja.vim"
 
