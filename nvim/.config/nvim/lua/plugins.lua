@@ -117,6 +117,14 @@ return require("packer").startup(function(use)
 
 	use "mfussenegger/nvim-jdtls"
 
+	use {
+		"folke/noice.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify"
+		}
+	}
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	if packer_bootstrap then
 		require("packer").sync()
