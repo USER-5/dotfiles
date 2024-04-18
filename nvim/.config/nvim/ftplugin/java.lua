@@ -52,6 +52,12 @@ local config = {
 			signatureHelp = { enabled =  true}
 		}
 	}
+	handlers = {
+		-- Don't print the language status messages
+		["language/status"] = function(_, result)
+			-- print(result)
+		end,
+	}
 }
 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, noremap)
