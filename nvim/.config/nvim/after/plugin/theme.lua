@@ -2,9 +2,6 @@ require('onenord').setup({
 	styles = {
 		comments = "italic",
 	},
-	inverse = {
-		match_paren = true
-	}
 })
 vim.cmd('colorscheme onenord')
 
