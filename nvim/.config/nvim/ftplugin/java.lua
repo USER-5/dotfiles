@@ -51,7 +51,7 @@ local config = {
 			},
 			signatureHelp = { enabled =  true}
 		}
-	}
+	},
 	handlers = {
 		-- Don't print the language status messages
 		["language/status"] = function(_, result)
