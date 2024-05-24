@@ -1,4 +1,5 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+local equinox_launcher = vim.fn.glob("/opt/jdtls/plugins/org.eclipse.equinox.launcher*")
 
 local config = {
 	cmd = {
@@ -15,12 +16,12 @@ local config = {
 		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 		'-javaagent:/opt/jdtls/deps/lombok.jar',
 
-		'-jar', '/opt/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+		'-jar', equinox_launcher,
 
 		'-configuration', '/opt/jdtls/config_linux',
 		'-data', '/opt/jdtls/workspaces/' .. project_name
 	},
-	root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew', 'gradle', 'build.gradle'}),
+	root_dir = require('jdtls.setup').find_root({ '.git', 'mvnw', 'gradlew', 'gradle', 'build.gradle' }),
 	settings = {
 		java = {
 			configuration = {
@@ -39,7 +40,7 @@ local config = {
 				gradle = {
 					wrapper = {
 						checksums = {
-							{sha256 = '91a239400bb638f36a1795d8fdf7939d532cdc7d794d1119b7261aac158b1e60', allowed = true}
+							{ sha256 = '91a239400bb638f36a1795d8fdf7939d532cdc7d794d1119b7261aac158b1e60', allowed = true }
 						}
 					}
 				}
@@ -49,7 +50,7 @@ local config = {
 					url = '/var/formatter.xml'
 				}
 			},
-			signatureHelp = { enabled =  true}
+			signatureHelp = { enabled = true }
 		}
 	},
 	handlers = {

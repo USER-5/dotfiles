@@ -1,6 +1,3 @@
-# Always start at the bottom of a terminal window
-tput cup $LINES
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -42,5 +39,8 @@ bindkey "^[[3~" delete-char
 
 # always ls in colour
 alias ls='ls --color=auto'
+
+#disable auto correct
+unsetopt correct_all
 
 [ -f "/Users/patrickgregory/.ghcup/env" ] && source "/Users/patrickgregory/.ghcup/env" # ghcup-env
