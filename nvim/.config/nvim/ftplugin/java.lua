@@ -1,5 +1,5 @@
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local equinox_launcher = vim.fn.glob("/opt/jdtls/plugins/org.eclipse.equinox.launcher*")
+local equinox_launcher = vim.fn.glob("/opt/jdtls/plugins/org.eclipse.equinox.launcher_*")
 
 local config = {
 	cmd = {
