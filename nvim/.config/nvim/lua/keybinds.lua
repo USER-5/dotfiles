@@ -1,6 +1,7 @@
 -- Set leader to space
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true })
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Macos Pasting
 vim.keymap.set('i', '<D-v>', '<c-r>+')

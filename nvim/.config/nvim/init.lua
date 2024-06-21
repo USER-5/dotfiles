@@ -1,9 +1,8 @@
 local modules = {
-	'plugins',
 	'keybinds',
-	'indentation',
 	'editor',
-	'run',
+	'indentation',
+	'plugin-loader',
 }
 
 -- allow hard (no cache) reload of config
