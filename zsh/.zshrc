@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export NIX_SHELL_PRESERVE_PROMPT=true
 
 # Powerlevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -44,3 +45,4 @@ alias ls='ls --color=auto'
 unsetopt correct_all
 
 [ -f "/Users/patrickgregory/.ghcup/env" ] && source "/Users/patrickgregory/.ghcup/env" # ghcup-env
+eval "$(direnv hook zsh)"

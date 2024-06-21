@@ -21,17 +21,19 @@ return {
 		opts = {
 			ensure_installed = lsps,
 		},
-		events = "VeryLazy",
+		event = "VeryLazy",
 		config = true,
 	},
 	-- mason itself
 	{
 		"williamboman/mason.nvim",
 		config = true,
+		cmd = "Mason",
 	},
 	-- lspconfig for mason
 	{
 		"williamboman/mason-lspconfig.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"williamboman/mason.nvim"
 		},
@@ -49,7 +51,7 @@ return {
 				"svelte",
 				"tailwindcss",
 				"ruff",
-				"eslint-lsp"
+				"eslint"
 			},
 			auto_update = false,
 			run_on_start = true,

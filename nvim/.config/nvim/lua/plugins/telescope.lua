@@ -1,9 +1,26 @@
+local have_make = vim.fn.executable("make") == 1
+local have_cmake = vim.fn.executable("cmake") == 1
+
 return {
-	"nvim-telescope/telescope.nvim", branch = "0.1.x",
+	"nvim-telescope/telescope.nvim",
+	branch = "0.1.x",
 	dependencies = {
-		"nvim-lua/plenary.nvim", 
+		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-ui-select.nvim",
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			-- Use LazyVim Config.
+			build = have_make and "make"
+					or
+					"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+			enabled = have_make or have_cmake,
+		},
+	},
+	cmd = "Telescope",
+	events = "VeryLazy",
+	keys = {
+		{ "<leader>ff", require("telescope.builtin").find_files, desc = "Fuzzy Search Files (Telescope)" },
+		{ "<leader>fg", require("telescope.builtin").live_grep,  desc = "Grep for Files (Telescope)" },
 	},
 	opts = {
 		defaults = {
@@ -49,11 +66,6 @@ return {
 		if vim.fn.executable("fd") == 0 then
 			print("fd not installed - recommend installing")
 		end
-
-		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep for Files (Telesope)" })
-		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Fuzzy Search Files (Telesope)" })
-
 	end,
 
 }
