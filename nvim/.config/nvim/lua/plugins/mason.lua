@@ -13,6 +13,7 @@ local lsps = {
 	"ruff",
 	"eslint",
 	"lua_ls",
+	"prettierd",
 }
 
 return {
