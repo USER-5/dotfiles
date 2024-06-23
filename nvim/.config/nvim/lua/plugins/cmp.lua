@@ -49,9 +49,17 @@ return {
 			}),
 
 			mapping = cmp.mapping.preset.insert({
-				-- ["<C-p>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-				-- ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
-				-- ["<C-y>"] = cmp.mapping.confirm({ select = false }),
+				["<Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						local entry = cmp.get_selected_entry()
+						if not entry then
+							cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+						end
+						cmp.confirm()
+					else
+						fallback()
+					end
+				end, { "i", "s", "c", }),
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu
