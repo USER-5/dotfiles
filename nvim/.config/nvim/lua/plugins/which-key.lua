@@ -6,8 +6,8 @@ return {
 		vim.o.timeoutlen = 300
 
 		local wk = require("which-key")
-		wk.register({
-			f = { name = "file" }
-		}, { prefix = "<leader>" })
+		wk.add({
+			{ "<leader>f", group = "file" }
+		})
 	end,
 }
