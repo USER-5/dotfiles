@@ -22,6 +22,7 @@ return {
 			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
 			yaml = { { "prettierd", "prettier" } },
+			nix = { "nixfmt" },
 		}
 	},
 	setup = true
