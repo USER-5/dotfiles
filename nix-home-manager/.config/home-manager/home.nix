@@ -68,6 +68,7 @@
     # pkgs.hello
     pkgs.nixfmt-rfc-style
 
+    pkgs.fd
     pkgs.zellij
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
