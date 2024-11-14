@@ -23,7 +23,7 @@
   programs.git = {
     enable = true;
     diff-so-fancy.enable = true;
-    alias = {
+    aliases = {
       ci = "commit";
       lg = "log --oneline --decorate --graph";
     };
