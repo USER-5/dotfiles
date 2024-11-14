@@ -20,6 +20,17 @@
     enable = true;
     icons = "auto";
   };
+  programs.git = {
+    enable = true;
+    diff-so-fancy.enable = true;
+    alias = {
+      ci = "commit";
+      lg = "log --oneline --decorate --graph";
+    };
+    extraConfig = {
+      push.autosetupremote = "true";
+    };
+  };
   programs.zoxide = {
     enable = true;
     options = [ "--cmd cd" ];
