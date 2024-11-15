@@ -20,6 +20,7 @@
       push.autosetupremote = "true";
       color.diff.new = "blue";
     };
+    lfs.enable = true;
   };
 
   programs.zoxide = {
