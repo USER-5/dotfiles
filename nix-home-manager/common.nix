@@ -18,6 +18,7 @@
     };
     extraConfig = {
       push.autosetupremote = "true";
+      color.diff.new = "blue";
     };
   };
 
