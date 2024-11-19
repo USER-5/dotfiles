@@ -69,6 +69,7 @@
   home.packages = [
     pkgs.nixfmt-rfc-style
     pkgs.fd
+    pkgs.ripgrep
     pkgs.zellij
   ];
 
