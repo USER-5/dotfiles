@@ -9,5 +9,8 @@ return {
 		wk.add({
 			{ "<leader>f", group = "file" }
 		})
+		wk.add({
+			{ "<leader>h", group = "harpoon" }
+		})
 	end,
 }

@@ -55,11 +55,9 @@
       '';
     };
 
-    envExtra = ''
-      . "$HOME/.cargo/env"
-    '';
-
   };
+
+  programs.fd.enable = true;
 
   programs.neovim = {
     enable = true;
@@ -68,7 +66,6 @@
 
   home.packages = [
     pkgs.nixfmt-rfc-style
-    pkgs.fd
     pkgs.ripgrep
     pkgs.zellij
   ];

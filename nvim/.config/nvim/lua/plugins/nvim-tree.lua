@@ -19,6 +19,9 @@ return {
 		update_cwd = true,
 		renderer = {
 			group_empty = true,
-		}
+		},
+		view = {
+			width = 60,
+		},
 	},
 }
