@@ -6,7 +6,7 @@ return {
 		{
 			"<leader>o",
 			function()
-				require("conform").format({ async = true, lsp_format = "fallback" })
+				require("conform").format({ async = true })
 			end,
 			desc = "Format Buffer (Conform)"
 		}
