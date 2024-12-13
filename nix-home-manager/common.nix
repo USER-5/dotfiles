@@ -65,8 +65,12 @@
   };
 
   home.packages = [
+    pkgs.fzf
+    pkgs.htop
+    pkgs.jq
     pkgs.nixfmt-rfc-style
     pkgs.ripgrep
+    pkgs.yq-go
     pkgs.zellij
   ];
 
