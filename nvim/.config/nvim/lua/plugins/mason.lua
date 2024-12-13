@@ -13,6 +13,7 @@ local lsps = {
 	"eslint",
 	"lua_ls",
 	"prettierd",
+	"vtsls",
 }
 
 return {
@@ -50,7 +51,8 @@ return {
 				"svelte",
 				"tailwindcss",
 				"ruff",
-				"eslint"
+				"eslint",
+				"vtsls",
 			},
 			auto_update = false,
 			run_on_start = true,
