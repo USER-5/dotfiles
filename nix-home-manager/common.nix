@@ -36,12 +36,6 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      ls = "eza --icons";
-      ll = "eza --icons -l";
-      zellij-clean = "for SESS in \"$(zellij ls -s -n)\"; do zellij delete-session \"$SESS\"; done";
-    };
-
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/.histfile";
@@ -74,6 +68,12 @@
     pkgs.yq-go
     pkgs.zellij
   ];
+
+  home.shellAliases = {
+    ls = "eza --icons";
+    ll = "eza --icons -l";
+    zellij-clean = "for SESS in \"$(zellij ls -s -n)\"; do zellij delete-session \"$SESS\"; done";
+  };
 
   nix = {
     package = pkgs.nix;
