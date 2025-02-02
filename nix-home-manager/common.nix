@@ -28,7 +28,10 @@
     options = [ "--cmd cd" ];
   };
 
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    settings.git_status.disabled = true;
+  };
 
   programs.bash.enable = true;
   programs.zsh = {
