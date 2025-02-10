@@ -76,7 +76,7 @@
   home.shellAliases = {
     ls = "eza --icons";
     ll = "eza --icons -l";
-    zellij-clean = "for SESS in \"$(zellij ls -s -n)\"; do zellij delete-session \"$SESS\"; done";
+    zellij-clean = "for SESS in $(zellij ls -s -n); do zellij delete-session \"$SESS\"; done";
   };
 
   nix = {
