@@ -73,6 +73,11 @@
     pkgs.zellij
   ];
 
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+  ];
+
   home.shellAliases = {
     ls = "eza --icons";
     ll = "eza --icons -l";
