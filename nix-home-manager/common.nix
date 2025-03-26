@@ -64,6 +64,11 @@
     defaultEditor = true;
   };
 
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+  ];
+
   home.packages = [
     pkgs.fzf
     pkgs.htop
@@ -72,11 +77,6 @@
     pkgs.ripgrep
     pkgs.yq-go
     pkgs.zellij
-  ];
-
-  home.sessionPath = [
-    "$HOME/.local/bin"
-    "$HOME/.cargo/bin"
   ];
 
   home.shellAliases = {
