@@ -15,7 +15,7 @@
     aliases = {
       ci = "commit";
       lg = "log --oneline --decorate --graph";
-      pl = "!git pull $(git rev-parse --abbrev-ref HEAD)";
+      pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)";
     };
     extraConfig = {
       push.autosetupremote = "true";
