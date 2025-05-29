@@ -74,6 +74,9 @@
     pkgs.htop
     pkgs.jq
     pkgs.nixfmt-rfc-style
+    pkgs.vtsls
+    pkgs.vscode-langservers-extracted
+    pkgs.lua-language-server
     pkgs.ripgrep
     pkgs.yq-go
     pkgs.zellij
