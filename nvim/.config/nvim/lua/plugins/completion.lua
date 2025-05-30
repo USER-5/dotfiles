@@ -2,7 +2,7 @@ return {
 	{
 		'echasnovski/mini.completion',
 		dependencies = {
-			'echanovski/mini.icons',
+			'echasnovski/mini.icons',
 			config = {}
 		},
 		version = false,
