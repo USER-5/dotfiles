@@ -77,6 +77,7 @@
     pkgs.vtsls
     pkgs.vscode-langservers-extracted
     pkgs.lua-language-server
+    pkgs.pyright
     pkgs.ripgrep
     pkgs.yq-go
     pkgs.zellij
