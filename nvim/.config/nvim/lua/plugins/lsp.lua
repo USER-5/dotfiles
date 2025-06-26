@@ -9,7 +9,8 @@ return {
 		vim.lsp.config('java-language-server', {
 			cmd = { 'java-language-server' }
 		})
-		vim.lsp.enable('java-language-server')
+		-- This looks like the best option, but it totally craps out on me
+		-- vim.lsp.enable('java-language-server')
 	end,
 }
 
