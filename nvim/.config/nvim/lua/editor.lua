@@ -16,6 +16,9 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
+-- Use term escape code for system clipboard. Requires supporting terminal, but works over SSH
+vim.g.clipboard = "osc52"
+
 vim.opt.updatetime = 50
 
 vim.opt.scrolloff = 8
@@ -25,3 +28,4 @@ vim.opt.winborder = 'rounded'
 vim.diagnostic.config({
   virtual_lines = true
 })
+
