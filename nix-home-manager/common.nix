@@ -9,6 +9,10 @@
     icons = "auto";
   };
 
+  programs.bat = {
+    enable = true;
+  };
+
   programs.git = {
     enable = true;
     delta.enable = true;
