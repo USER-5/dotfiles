@@ -20,6 +20,7 @@
     extraConfig = {
       push.autosetupremote = "true";
       color.diff.new = "blue";
+      delta.plus-style = "auto darkblue";
     };
     lfs.enable = true;
   };
@@ -89,6 +90,7 @@
     ls = "eza --icons";
     ll = "eza --icons -l";
     zellij-clean = "for SESS in $(zellij ls -s -n); do zellij delete-session \"$SESS\"; done";
+    copy = "printf '\\033]52;c;%s\\a' \"$(cat | base64 | tr -d '\\n')\"";
   };
 
   nix = {
