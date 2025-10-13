@@ -75,7 +75,7 @@
   ];
 
   home.sessionVariables = {
-    PNPM_HOME="$HOME/.local/bin"
+    PNPM_HOME = "$HOME/.local/bin";
   };
 
   home.packages = [
