@@ -74,6 +74,10 @@
     "$HOME/.cargo/bin"
   ];
 
+  home.sessionVariables = {
+    PNPM_HOME="$HOME/.local/bin"
+  };
+
   home.packages = [
     pkgs.fzf
     pkgs.htop
