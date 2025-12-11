@@ -88,7 +88,7 @@
     pkgs.lua-language-server
     pkgs.pyright
     pkgs.ruff
-    pkgs.java-language-server
+    pkgs.jdt-language-server
     pkgs.ripgrep
     pkgs.yq-go
     pkgs.zellij
