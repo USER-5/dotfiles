@@ -93,6 +93,7 @@
     packages = [
       pkgs.htop
       pkgs.jq
+      pkgs.just
       pkgs.nixfmt-rfc-style
       pkgs.vtsls
       pkgs.vscode-langservers-extracted
