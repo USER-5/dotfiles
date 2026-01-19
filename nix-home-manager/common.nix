@@ -10,6 +10,12 @@
       icons = "auto";
     };
 
+    fzf = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
+
     bat.enable = true;
 
     git = {
@@ -85,7 +91,6 @@
     };
 
     packages = [
-      pkgs.fzf
       pkgs.htop
       pkgs.jq
       pkgs.nixfmt-rfc-style
