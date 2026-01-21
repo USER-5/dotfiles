@@ -21,6 +21,7 @@ return {
 	keys = {
 		{ "<leader>ff", require("telescope.builtin").find_files, desc = "Fuzzy Search Files (Telescope)" },
 		{ "<leader>fg", require("telescope.builtin").live_grep,  desc = "Grep for Files (Telescope)" },
+		{ "<leader>fw", require("telescope.builtin").grep_string,  desc = "Grep Based on Cursor Text (Telescope)" },
 	},
 	opts = {
 		defaults = {
