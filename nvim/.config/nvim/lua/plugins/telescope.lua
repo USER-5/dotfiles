@@ -3,7 +3,7 @@ local have_cmake = vim.fn.executable("cmake") == 1
 
 return {
 	"nvim-telescope/telescope.nvim",
-	branch = "0.1.x",
+	tag = "v0.2.1",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-ui-select.nvim",
