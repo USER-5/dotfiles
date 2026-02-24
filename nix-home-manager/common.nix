@@ -102,6 +102,7 @@
       pkgs.ruff
       pkgs.jdt-language-server
       pkgs.ripgrep
+      pkgs.tree-sitter
       pkgs.yq-go
       pkgs.zellij
     ];
