@@ -6,6 +6,7 @@ return {
 		vim.lsp.enable('eslint')
 		vim.lsp.enable('pyright')
 		vim.lsp.enable('ruff')
+		vim.lsp.enable('svelte')
 	end,
 }
 
