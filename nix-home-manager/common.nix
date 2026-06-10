@@ -93,6 +93,7 @@
 
     packages = [
       pkgs.htop
+      pkgs.gh
       pkgs.jq
       pkgs.just
       pkgs.nixfmt-rfc-style
