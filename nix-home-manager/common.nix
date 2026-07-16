@@ -110,8 +110,8 @@
     ];
 
     shellAliases = {
-      ls = "eza --icons";
-      ll = "eza --icons -l";
+      ls = "eza --icons always";
+      ll = "eza --icons always -l";
       zellij-clean = "for SESS in $(zellij ls -s -n); do zellij delete-session \"$SESS\"; done";
     };
   };
