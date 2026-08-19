@@ -88,7 +88,7 @@
     ];
 
     sessionVariables = {
-      PNPM_HOME = "$HOME/.local/bin";
+      PNPM_HOME = "$HOME/.local";
     };
 
     packages = [
