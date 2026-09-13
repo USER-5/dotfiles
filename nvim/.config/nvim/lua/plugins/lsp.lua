@@ -7,6 +7,7 @@ return {
 		vim.lsp.enable('pyright')
 		vim.lsp.enable('ruff')
 		vim.lsp.enable('svelte')
+		vim.lsp.enable('tailwindcss')
 	end,
 }
 
