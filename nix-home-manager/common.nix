@@ -93,6 +93,7 @@
     };
 
     packages = [
+      pkgs.devenv
       pkgs.htop
       pkgs.jq
       pkgs.just
