@@ -18,6 +18,7 @@
 
     bat.enable = true;
 
+    gh.enable = true;
     git = {
       enable = true;
       settings = {
@@ -93,7 +94,6 @@
 
     packages = [
       pkgs.htop
-      pkgs.gh
       pkgs.jq
       pkgs.just
       pkgs.nixfmt
