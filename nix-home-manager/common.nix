@@ -96,7 +96,7 @@
       pkgs.gh
       pkgs.jq
       pkgs.just
-      pkgs.nixfmt-rfc-style
+      pkgs.nixfmt
       pkgs.vtsls
       pkgs.vscode-langservers-extracted
       pkgs.lua-language-server
