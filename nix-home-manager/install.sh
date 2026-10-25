@@ -3,6 +3,7 @@
 cp "$(dirname $0)/common.nix" ~/.config/home-manager/common.nix
 cp "$(dirname $0)/gui.nix" ~/.config/home-manager/gui.nix
 cp "$(dirname $0)/git.nix" ~/.config/home-manager/git.nix
+cp "$(dirname $0)/ai.nix" ~/.config/home-manager/ai.nix
 
 echo "New file copied to ~/.config/home-manager/common.nix"
 if [ -f ~/.config/home-manager/flake.nix ]; then
