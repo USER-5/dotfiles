@@ -16,6 +16,8 @@
       enableZshIntegration = true;
     };
 
+    jujutsu.enable = true;
+
     bat.enable = true;
 
     gh.enable = true;
